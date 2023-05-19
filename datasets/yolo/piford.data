@@ -1,0 +1,5 @@
+classes= 3 
+train  = data/custom/train.txt  
+valid  = data/custom/test.txt  
+names = data/custom/piford.names  
+backup = backup/
