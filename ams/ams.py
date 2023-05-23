@@ -173,18 +173,18 @@ def cvDrawBoxes(detections, img):
 
 
                 #For MLP AMS
-                predictors_per2 = ((predictors_per - u)) / s  # Only for mlp
-                predictors_model = np.array(predictors_per2).reshape(1,-1)
-                ypredic_model = loaded_model_selection.predict(predictors_model)
-
-
-                #For RFC AMS
-                #predictors_model = np.array(predictors_per).reshape(1,-1)
+                #predictors_per2 = ((predictors_per - u)) / s  # Only for mlp
+                #predictors_model = np.array(predictors_per2).reshape(1,-1)
                 #ypredic_model = loaded_model_selection.predict(predictors_model)
 
 
+                #For RFC AMS
+                predictors_model = np.array(predictors_per).reshape(1,-1)
+                ypredic_model = loaded_model_selection.predict(predictors_model)
+
+
                 if ypredic_model == 0:
-                    modelo = "MLP10"
+                    modelo = "MLP1"
                     predictors_per = ((predictors_per - u)) / s #Only for mlp
                     predictors_per = np.array(predictors_per).reshape(1, -1)
                     ypredic_per = loaded_model_per0.predict(predictors_per)
@@ -281,8 +281,9 @@ def cvDrawBoxes(detections, img):
                                               Intersection_Up_left,
                                               Intersection_Up_right]
 
-                            predictors_fac = np.array(predictors_fac).reshape(1,
-                                                                              -1)  # una fila y el resto de datos indistinto.
+                            #predictors_fac = ((predictors_fac - u)) / s  # Only for mlp
+
+                            predictors_fac = np.array(predictors_fac).reshape(1, -1)  # una fila y el resto de datos indistinto.
 
                             ypredic_fac = loaded_model_fac.predict(predictors_fac)
 
@@ -307,7 +308,7 @@ def cvDrawBoxes(detections, img):
                         prediction = 0
 
                 elif ypredic_model == 1:
-                    modelo = "MLP17"
+                    modelo = "MLP2"
                     predictors_per = [[currentframe, nper, per_xmid, per_ymid, per_xmin, per_ymin, per_xmax, per_ymax, nhg, hg_xmid, hg_ymid, hg_xmin, hg_ymin,
                    hg_xmax, hg_ymax, included_center, areai, areah, dist, Intersection_Center_left, Intersection_Center_right,
                    Intersection_Down_center, Intersection_Down_left, Intersection_Inside, Intersection_No_intersection, Intersection_Up_center,
@@ -406,6 +407,8 @@ def cvDrawBoxes(detections, img):
                                               Intersection_Inside, Intersection_No_intersection, Intersection_Up_center, Intersection_Up_left,
                                               Intersection_Up_right]
 
+                            #predictors_fac = ((predictors_fac - u)) / s  # Only for mlp
+
                             predictors_fac = np.array(predictors_fac).reshape(1,-1) # una fila y el resto de datos indistinto.
 
                             ypredic_fac = loaded_model_fac.predict(predictors_fac)
@@ -430,7 +433,7 @@ def cvDrawBoxes(detections, img):
                         prediction = 0
 
                 elif ypredic_model == 2:
-                    modelo = "RFC11"
+                    modelo = "RFC1"
                     predictors_per = [[currentframe, nper, per_xmid, per_ymid, per_xmin, per_ymin, per_xmax, per_ymax, nhg, hg_xmid, hg_ymid, hg_xmin, hg_ymin,
                    hg_xmax, hg_ymax, included_center, areai, areah, dist, Intersection_Center_left, Intersection_Center_right,
                    Intersection_Down_center, Intersection_Down_left, Intersection_Inside, Intersection_No_intersection, Intersection_Up_center,
@@ -528,6 +531,8 @@ def cvDrawBoxes(detections, img):
                                               Intersection_Inside, Intersection_No_intersection, Intersection_Up_center, Intersection_Up_left,
                                               Intersection_Up_right]
 
+                            # predictors_fac = ((predictors_fac - u)) / s  # Only for mlp
+
                             predictors_fac = np.array(predictors_fac).reshape(1,-1) # una fila y el resto de datos indistinto.
 
                             ypredic_fac = loaded_model_fac.predict(predictors_fac)
@@ -553,7 +558,7 @@ def cvDrawBoxes(detections, img):
 
 
                 elif ypredic_model == 3:
-                    modelo = "RFC12"
+                    modelo = "RFC2"
                     predictors_per = [[currentframe, nper, per_xmid, per_ymid, per_xmin, per_ymin, per_xmax, per_ymax, nhg, hg_xmid, hg_ymid, hg_xmin, hg_ymin,
                    hg_xmax, hg_ymax, included_center, areai, areah, dist, Intersection_Center_left, Intersection_Center_right,
                    Intersection_Down_center, Intersection_Down_left, Intersection_Inside, Intersection_No_intersection, Intersection_Up_center,
@@ -651,6 +656,7 @@ def cvDrawBoxes(detections, img):
                                               Intersection_Inside, Intersection_No_intersection, Intersection_Up_center, Intersection_Up_left,
                                               Intersection_Up_right]
 
+                            #predictors_fac = ((predictors_fac - u)) / s  # Only for mlp
                             predictors_fac = np.array(predictors_fac).reshape(1,-1) # una fila y el resto de datos indistinto.
 
                             ypredic_fac = loaded_model_fac.predict(predictors_fac)
@@ -685,14 +691,14 @@ altNames = None
 currentframe=-1 #Creamos una variable global q usamos en el contador de cropped faces.
 
 #Automatic model selection
-#loaded_model_selection = pickle.load(open('./modelos/hg/rfc_model_intersection7.sav', 'rb'))
-loaded_model_selection = pickle.load(open('./modelos/hg/mlp_model_intersection5.sav', 'rb'))
+loaded_model_selection = pickle.load(open('./modelos/hg/rfc_model_intersection6.sav', 'rb'))
+#loaded_model_selection = pickle.load(open('./modelos/hg/mlp_model_intersection.sav', 'rb'))
 
 #People detection model
-loaded_model_per0 = pickle.load(open('./modelos/hg/mlp10.sav', 'rb'))
-loaded_model_per1 = pickle.load(open('./modelos/hg/mlp17.sav', 'rb'))
-loaded_model_per2 = pickle.load(open('./modelos/hg/rfc11.sav', 'rb'))
-loaded_model_per3 = pickle.load(open('./modelos/hg/rfc12.sav', 'rb'))
+loaded_model_per0 = pickle.load(open('./modelos/hg/mlp1.sav', 'rb'))
+loaded_model_per1 = pickle.load(open('./modelos/hg/mlp2.sav', 'rb'))
+loaded_model_per2 = pickle.load(open('./modelos/hg/rfc1.sav', 'rb'))
+loaded_model_per3 = pickle.load(open('./modelos/hg/rfc2.sav', 'rb'))
 
 #Faces detection model
 #loaded_model_fac = pickle.load(open('./modelos/fac/rfc_t.sav', 'rb'))
@@ -743,7 +749,7 @@ def YOLO():
         except Exception:
             pass
     #cap = cv2.VideoCapture(0)
-    cap = cv2.VideoCapture("./videos_entrada/Paper.mp4")   # <----- Replace with your video directory
+    cap = cv2.VideoCapture("./videos_entrada/video_test.mp4")   # <----- Replace with your video directory
     frame_width = int(cap.get(3))
     frame_height = int(cap.get(4))
     new_height, new_width = frame_height // 2, frame_width // 2
