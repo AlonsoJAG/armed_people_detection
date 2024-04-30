@@ -3,17 +3,17 @@ The proposed solution involves the development of algorithms for identifying peo
 and faces. Then, we extract information from YOLO related to real-time videos, such as bounding box coordinates, distances, and intersection areas between firearms and the people in each video frame to recognize the armed people.
 ## Table of Contents
 
-* [Armed People Detection Algorithm]
+* [Armed People Detection Algorithm](#acceso-proyecto)
 
-* [Dataset Generator]
+* [Dataset Generator](#acceso-proyecto)
 
-* [Datasets]
+* [Datasets](#acceso-proyecto)
 
-* [Heuristics]
+* [Heuristics](#acceso-proyecto)
 
-* [Videos]
+* [Videos](#acceso-proyecto)
 
-* [Yolo]
+* [Yolo](#acceso-proyecto)
 
 * [Acceso al proyecto](#acceso-proyecto)
 
