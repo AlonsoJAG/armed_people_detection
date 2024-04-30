@@ -1,6 +1,6 @@
 # armed_people_detection
 
-# Table of Contents
+## Table of Contents
 
 * [Título e imagen de portada](#Título-e-imagen-de-portada)
 
