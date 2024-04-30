@@ -1,2 +1,3 @@
 # armed_people_detection
-Table of Contents
+<em> # Table of Contents </em>
+
