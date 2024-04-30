@@ -2,25 +2,25 @@
 
 ##Table of Contents
 
-*[Título e imagen de portada](#Título-e-imagen-de-portada)
+* [Título e imagen de portada](#Título-e-imagen-de-portada)
 
-*[Insignias](#insignias)
+* [Insignias](#insignias)
 
-*[Índice](#índice)
+* [Índice](#índice)
 
-*[Descripción del proyecto](#descripción-del-proyecto)
+* [Descripción del proyecto](#descripción-del-proyecto)
 
-*[Estado del proyecto](#Estado-del-proyecto)
+* [Estado del proyecto](#Estado-del-proyecto)
 
-*[Características de la aplicación y demostración](#Características-de-la-aplicación-y-demostración)
+* [Características de la aplicación y demostración](#Características-de-la-aplicación-y-demostración)
 
-*[Acceso al proyecto](#acceso-proyecto)
+* [Acceso al proyecto](#acceso-proyecto)
 
-*[Tecnologías utilizadas](#tecnologías-utilizadas)
+* [Tecnologías utilizadas](#tecnologías-utilizadas)
 
-*[Personas Contribuyentes](#personas-contribuyentes)
+* [Personas Contribuyentes](#personas-contribuyentes)
 
-*[Personas-Desarrolladores del Proyecto](#personas-desarrolladores)
+* [Personas-Desarrolladores del Proyecto](#personas-desarrolladores)
 
 * [Licencia](#licencia)
 
