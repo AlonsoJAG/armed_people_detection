@@ -11,7 +11,7 @@ and faces. Then, we extract information from YOLO related to real-time videos, s
 
 * [Heuristics]
 
-* [Videos)
+* [Videos]
 
 * [Yolo]
 
