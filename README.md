@@ -15,14 +15,4 @@ and faces. Then, we extract information from YOLO related to real-time videos, s
 
 * [Yolo](#Yolo)
 
-* [Acceso al proyecto](#acceso-proyecto)
-
-* [Tecnologías utilizadas](#tecnologías-utilizadas)
-
-* [Personas Contribuyentes](#personas-contribuyentes)
-
-* [Personas-Desarrolladores del Proyecto](#personas-desarrolladores)
-
-* [Licencia](#licencia)
-
 * [Conclusión](#conclusión)
