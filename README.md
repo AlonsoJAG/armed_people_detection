@@ -25,7 +25,7 @@ The dataset used for the MLP, KNN, and SVM training process was standardized bef
 
 
 ```
-To normalize the mlp data (All predictors-training dataset - 28 predictors):
+To normalize the MLP, KNN, SVM data (All predictors-training dataset - 28 predictors):
 
 u = np.array([9.09106623e+02, 1.05738223e+00, 4.01556492e+02, 4.15881999e+02,
               3.15145035e+02, 3.00285205e+02, 4.87967948e+02, 5.31478794e+02,
