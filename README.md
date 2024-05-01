@@ -43,3 +43,13 @@ s = np.array([4.43693600e+02, 9.50245842e-01, 2.16075512e+02, 4.92883235e+01,
               2.52106880e-01, 2.35152312e-02, 1.25719046e-02, 3.65331682e-01,
               4.96184680e-01, 1.42139325e-01, 7.25779719e-02, 1.66936922e-01])
 ```
+```
+On line 189 we can unlock the normalization of the data:
+
+                #predictors_per = ((predictors_per - u)) / s # Only for mlp, knn, and svm. <--------------
+                predictors_per = np.array(predictors_per).reshape(1,-1)
+                print(predictors_per)
+                ypredic_per = loaded_model_per.predict(predictors_per)
+                print(f"Prediction_person {nper}: {ypredic_per}")
+```
+
