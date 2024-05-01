@@ -186,7 +186,7 @@ def cvDrawBoxes(detections, img):
                       f' hginper={Intersection_Inside}, ni={Intersection_No_intersection}, sc={Intersection_Up_center}, si={Intersection_Up_left},'
                      f' sd={Intersection_Up_right}')
 
-                #predictors_per = ((predictors_per - u)) / s #Only for mlp
+                #predictors_per = ((predictors_per - u)) / s # Only for mlp, knn, and svm.
                 predictors_per = np.array(predictors_per).reshape(1,-1)
                 print(predictors_per)
                 ypredic_per = loaded_model_per.predict(predictors_per)
