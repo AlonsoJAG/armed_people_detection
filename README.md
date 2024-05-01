@@ -53,3 +53,19 @@ On line 189 we can unlock the normalization of the data:
                 print(f"Prediction_person {nper}: {ypredic_per}")
 ```
 
+```
+On line 322 we can find the codes to select the models to use both to detect people and their faces:
+#People detection model
+#loaded_model_per = pickle.load(open('./modelos/hg/rfc_t4.sav', 'rb'))
+loaded_model_per = pickle.load(open('./modelos/hg/rfc11.sav', 'rb'))
+#loaded_model_per = pickle.load(open('./modelos/hg/mlp_t10.sav', 'rb'))
+#loaded_model_per = pickle.load(open('./modelos/hg/mlp17.sav', 'rb'))
+#loaded_model_per = pickle.load(open('./modelos/hg/bag_model.sav', 'rb'))
+
+#Faces detection model
+#loaded_model_fac = pickle.load(open('./modelos/fac/rfc_t.sav', 'rb'))
+loaded_model_fac = pickle.load(open('./modelos/fac/rfc.sav', 'rb'))
+#loaded_model_fac = pickle.load(open('./modelos/fac/mlp_t.sav', 'rb'))
+#loaded_model_fac = pickle.load(open('./modelos/fac/mlp.sav', 'rb'))
+```
+
