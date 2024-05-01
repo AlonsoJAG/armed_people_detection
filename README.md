@@ -23,8 +23,10 @@ The algorithm is used to detect armed people. The file is saved in the armed_peo
 The dataset used for the MLP, KNN, and SVM training process was standardized before training using the function StandardScaler from the Scikit-Learn library (Jupyter Notebook). However, we import the models into our general system to receive the input data from YOLO’s live stream. It implies that the input data must be in the same conditions as the training process. Consequently, it was mandatory to standardize the input data in real-time, so we have applied the mathematical formula used by the StandardScaler function according to z = (x − u)/s, where x represents the input data to be standardized, u stands for the mean, and s is the standard deviation of the training samples.
 
 
-To normalize the mlp data (All predictors-training dataset - 28 predictors)
+
 ```
+To normalize the mlp data (All predictors-training dataset - 28 predictors):
+
 u = np.array([9.09106623e+02, 1.05738223e+00, 4.01556492e+02, 4.15881999e+02,
               3.15145035e+02, 3.00285205e+02, 4.87967948e+02, 5.31478794e+02,
               3.87211508e-01, 3.15303209e+02, 3.59825385e+02, 2.92086914e+02,
