@@ -121,3 +121,9 @@ Lines 320 for DMI, 193 for DMC, and 229 for DMD:
     #cap = cv2.VideoCapture(0)
     cap = cv2.VideoCapture("./videos_entrada/trasera.mp4")   # <----- Replace with your video directory
 ```
+The processed videos are saved automatically. The path where they are stored can be edited in the following lines of code: DMI on line 328, DMC on line 201, and DMD on line 237.
+```
+    out = cv2.VideoWriter(
+            "./videos_salida/distance.avi", cv2.VideoWriter_fourcc(*"MJPG"), 10.0, # <----- Replace with your output directory
+            (new_width, new_height))
+```
