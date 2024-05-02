@@ -1,9 +1,7 @@
 import math
 import os
 import time
-
 import cv2
-
 import darknet
 
 
