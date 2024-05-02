@@ -69,5 +69,11 @@ loaded_model_fac = pickle.load(open('./modelos/fac/rfc.sav', 'rb'))
 #loaded_model_fac = pickle.load(open('./modelos/fac/mlp.sav', 'rb'))
 ```
 ## Dataset Generator
-The [dataset generator](dataset_generator/dataset_generator.py) file is used to generate the dataset used in training and testing. On line 212 of the code we can choose the video from which we will extract the data to generate the dataset. 
-
+The [dataset generator](dataset_generator/dataset_generator.py) file is used to generate the dataset used in training and testing. On line 212 of the code we can choose the video from which we will extract the data to generate the dataset. On line 211 we can unlock the code that allows us to generate datasets in real time through the web camera.
+```
+    #cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture("./trasera.mp4")   # <----- Replace with your video directory
+    frame_width = int(cap.get(3))
+    frame_height = int(cap.get(4))
+    new_height, new_width = frame_height // 2, frame_width // 2
+```
