@@ -44,7 +44,7 @@ s = np.array([4.43693600e+02, 9.50245842e-01, 2.16075512e+02, 4.92883235e+01,
               4.96184680e-01, 1.42139325e-01, 7.25779719e-02, 1.66936922e-01])
 ```
 ```
-On line 189 we can unlock the normalization of the data:
+On line 189, we can unlock the normalization of the data:
 
                 #predictors_per = ((predictors_per - u)) / s # Only for mlp, knn, and svm. <--------------
                 predictors_per = np.array(predictors_per).reshape(1,-1)
@@ -54,7 +54,7 @@ On line 189 we can unlock the normalization of the data:
 ```
 
 ```
-On line 322 we can find the code to select the models to use both to detect people and their faces:
+On line 322, we can find the code to select the models to use both to detect people and their faces:
 #People detection model
 #loaded_model_per = pickle.load(open('./modelos/hg/rfc_t4.sav', 'rb'))
 loaded_model_per = pickle.load(open('./modelos/hg/rfc11.sav', 'rb'))
@@ -68,6 +68,8 @@ loaded_model_fac = pickle.load(open('./modelos/fac/rfc.sav', 'rb'))
 #loaded_model_fac = pickle.load(open('./modelos/fac/mlp_t.sav', 'rb'))
 #loaded_model_fac = pickle.load(open('./modelos/fac/mlp.sav', 'rb'))
 ```
+On line 377, we can unlock the code that allows us to make detections through the web camera in real-time. On line 378, we can specify the path where the video we want to work with is.
+
 ## Dataset Generator
 The [dataset generator](dataset_generator/dataset_generator.py) file is used to generate the dataset used in training and testing. On line 212 of the code we can choose the video from which we will extract the data to generate the dataset. On line 211 we can unlock the code that allows us to generate datasets in real time through the web camera.
 ```
