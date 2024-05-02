@@ -15,14 +15,10 @@ and faces. Then, we extract information from YOLO related to real-time videos, s
 
 * [Yolo](#Yolo)
 
-* [Conclusión](#conclusión)
-
 ## Armed People Detection Algorithm
 The algorithm is used to detect armed people. The file is saved in the armed_people_detection_algorithm folder with the name accuracy. This algorithm works together with YOLOv4 so the [darknet module](https://github.com/AlexeyAB/darknet) must be imported. The armed person and face detection models have been trained in Jupyter notebook and imported into this algorithm through the use of the pickle library. These trained models are shared in the folder named [models/ml_armed_people_detection](models/ml_armed_people_detection) and [models/ml_faces_armed_people_detection](models/ml_faces_armed_people_detection).
 
 The dataset used for the MLP, KNN, and SVM training process was standardized before training using the function StandardScaler from the Scikit-Learn library (Jupyter Notebook). However, we import the models into our general system to receive the input data from YOLO’s live stream. It implies that the input data must be in the same conditions as the training process. Consequently, it was mandatory to standardize the input data in real-time, so we have applied the mathematical formula used by the StandardScaler function according to z = (x − u)/s, where x represents the input data to be standardized, u stands for the mean, and s is the standard deviation of the training samples. Below is the mean and standard deviation used to normalize the data received by YOLO in real time.
-
-
 
 ```
 To normalize the MLP, KNN, SVM data (All predictors-training dataset - 28 predictors):
@@ -69,6 +65,13 @@ loaded_model_fac = pickle.load(open('./modelos/fac/rfc.sav', 'rb'))
 #loaded_model_fac = pickle.load(open('./modelos/fac/mlp.sav', 'rb'))
 ```
 On line 377, we can unlock the code that allows us to make detections through the web camera in real-time. On line 378, we can specify the path where the video we want to work with is.
+```
+    #cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture("./videos_entrada/trasera.mp4")   # <----- Replace with your video directory
+    frame_width = int(cap.get(3))
+    frame_height = int(cap.get(4))
+    new_height, new_width = frame_height // 2, frame_width // 2
+```
 
 ## Dataset Generator
 The [dataset generator](dataset_generator/dataset_generator.py) file is used to generate the dataset used in training and testing. On line 212 of the code we can choose the video from which we will extract the data to generate the dataset. On line 211 we can unlock the code that allows us to generate datasets in real time through the web camera.
