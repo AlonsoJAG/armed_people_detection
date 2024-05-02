@@ -127,3 +127,6 @@ The processed videos are saved automatically. The path where they are stored can
             "./videos_salida/distance.avi", cv2.VideoWriter_fourcc(*"MJPG"), 10.0, # <----- Replace with your output directory
             (new_width, new_height))
 ```
+## YOLO
+We used our dataset to train the YOLOv4 object detector. We trained it from scratch to recognize faces, handguns, and people in the video. We randomly divided our dataset into 4,000 images for training and 1,000 for testing. Afterward, we downloaded YOLOv4 from [Alexey Bochkovskiy’s GitHub](yolo) (YOLOv4 creator’s GitHub repository). Furthermore, we trained YOLOv4 for 6,000 iterations.
+
