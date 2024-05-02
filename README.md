@@ -54,7 +54,7 @@ On line 189 we can unlock the normalization of the data:
 ```
 
 ```
-On line 322 we can find the codes to select the models to use both to detect people and their faces:
+On line 322 we can find the code to select the models to use both to detect people and their faces:
 #People detection model
 #loaded_model_per = pickle.load(open('./modelos/hg/rfc_t4.sav', 'rb'))
 loaded_model_per = pickle.load(open('./modelos/hg/rfc11.sav', 'rb'))
