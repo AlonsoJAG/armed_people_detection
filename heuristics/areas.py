@@ -1,10 +1,7 @@
 import os
 import time
-
 import cv2
-
 import darknet
-
 
 def convertBack(x, y, w, h):
     #================================================================
