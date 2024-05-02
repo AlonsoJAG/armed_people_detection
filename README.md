@@ -72,7 +72,15 @@ On line 377, we can unlock the code that allows us to make detections through th
     frame_height = int(cap.get(4))
     new_height, new_width = frame_height // 2, frame_width // 2
 ```
-
+In line 93 we can modify the position where the file with the results of the processed video will be saved. This shows us that people were armed and unarmed. In lines 202 and 208 we can modify the predictors that we want to be shown in the results.
+```
+Line 93:
+    archivo = open("./label/results" + "_video_test" + ".txt", "a")
+```
+```
+Lines 202 and 208:
+    archivo.write(f"{currentframe},{nper},{per_xmid},{ypredic_per},{prob0},{prob1},{prediction}\n")
+```
 ## Dataset Generator
 The [dataset generator](dataset_generator/dataset_generator.py) file is used to generate the dataset used in training and testing. On line 212 of the code we can choose the video from which we will extract the data to generate the dataset. On line 211 we can unlock the code that allows us to generate datasets in real time through the web camera.
 ```
