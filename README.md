@@ -116,3 +116,9 @@ Lines 177 for DMI, 90 for DMC, and 129 for DMD:
     archivo = open("./label/results" + "_video_test" + ".txt", "a")
 ```
 
+```
+
+Lines 320 for DMI, 193 for DMC, and 229 for DMD:
+    #cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture("./videos_entrada/trasera.mp4")   # <----- Replace with your video directory
+```
