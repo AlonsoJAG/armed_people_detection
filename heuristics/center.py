@@ -1,4 +1,3 @@
-
 from ctypes import *
 import math
 import random
