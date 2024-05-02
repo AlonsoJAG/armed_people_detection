@@ -88,3 +88,5 @@ In line 218 we can modify the location where the video will be saved with the de
             "./trasera_output.avi", cv2.VideoWriter_fourcc(*"MJPG"), 10.0, # <----- Replace with your output directory
             (new_width, new_height))
 ```
+## Dataset 
+Two files have been shared in the [dataset folder](datasets/armed_people_detection). The file named Videos1_2_3.csv was used to train the armed person detection models. The video_test.csv file was used as the test dataset.
