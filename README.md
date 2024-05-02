@@ -68,4 +68,6 @@ loaded_model_fac = pickle.load(open('./modelos/fac/rfc.sav', 'rb'))
 #loaded_model_fac = pickle.load(open('./modelos/fac/mlp_t.sav', 'rb'))
 #loaded_model_fac = pickle.load(open('./modelos/fac/mlp.sav', 'rb'))
 ```
+## Dataset Generator
+The [dataset generator](dataset_generator/dataset_generator.py) file is used to generate the dataset used in training and testing. On line 212 of the code we can choose the video from which we will extract the data to generate the dataset. 
 
