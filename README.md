@@ -1,5 +1,5 @@
 <h1 align="center"> Armed People Detection </h1> 
-![Imagen1](https://github.com/user-attachments/assets/6c9b245b-098a-4a29-a964-f4d90f50a97a.png)
+![dgyjtjdd](https://github.com/user-attachments/assets/6c9b245b-098a-4a29-a964-f4d90f50a97a.png)
 
 
 The proposed solution involves the development of algorithms for identifying people carrying handguns (pistols and revolvers). We have chosen the YOLOv4 model to detect people, guns,
