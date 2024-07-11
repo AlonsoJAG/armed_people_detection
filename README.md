@@ -1,5 +1,6 @@
 <h1 align="center"> Armed People Detection </h1> 
-![Imagen1](https://github.com/user-attachments/assets/72d45ef3-978d-4953-a309-8d2abd2889d6)
+![Imagen1](https://github.com/user-attachments/assets/6c9b245b-098a-4a29-a964-f4d90f50a97a.png)
+
 
 The proposed solution involves the development of algorithms for identifying people carrying handguns (pistols and revolvers). We have chosen the YOLOv4 model to detect people, guns,
 and faces. Then, we extract information from YOLO related to real-time videos, such as bounding box coordinates, distances, and intersection areas between firearms and the people in each video frame to recognize the armed people.
