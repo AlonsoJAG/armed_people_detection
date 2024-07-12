@@ -6,7 +6,6 @@
 
 
 ![Static Badge](https://img.shields.io/badge/YOLO-Link-blue?labelColor=blue&color=red&link=https%3A%2F%2Fgithub.com%2FAlexeyAB%2Fdarknet)
-
 ![Static Badge](https://img.shields.io/badge/LabelImg-Link-red?labelColor=blue&color=yellow&link=https%3A%2F%2Fgithub.com%2Fheartexlabs%2FlabelImg)
 
 
