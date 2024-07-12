@@ -4,7 +4,7 @@
   <img width="460" height="300" src="https://github.com/user-attachments/assets/c7ac8d79-0978-481b-baa9-2555236af611/">
 </p>
 
-![Static Badge](https://img.shields.io/badge/YOLO-?logo=https%3A%2F%2Fgithub.com%2FSchweinepriester%2Fgithub-profile-achievements)
+![Static Badge](https://img.shields.io/badge/YOLO-Link-blue?labelColor=blue&color=red&link=https%3A%2F%2Fgithub.com%2FAlexeyAB%2Fdarknet)
 
 
 The proposed solution involves the development of algorithms for identifying people carrying handguns (pistols and revolvers). We have chosen the YOLOv4 model to detect people, guns,
