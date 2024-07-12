@@ -4,8 +4,9 @@
   <img width="460" height="300" src="https://github.com/user-attachments/assets/c7ac8d79-0978-481b-baa9-2555236af611/">
 </p>
 
+<object> 
 ![Static Badge](https://img.shields.io/badge/YOLO-Link-blue?labelColor=blue&color=red&link=https%3A%2F%2Fgithub.com%2FAlexeyAB%2Fdarknet)
-
+</object>object> 
 
 The proposed solution involves the development of algorithms for identifying people carrying handguns (pistols and revolvers). We have chosen the YOLOv4 model to detect people, guns,
 and faces. Then, we extract information from YOLO related to real-time videos, such as bounding box coordinates, distances, and intersection areas between firearms and the people in each video frame to recognize the armed people.
