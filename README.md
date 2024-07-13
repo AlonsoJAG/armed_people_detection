@@ -143,7 +143,7 @@ The processed videos are saved automatically. The path where they are stored can
 We used our dataset to train the YOLOv4 object detector. We trained it from scratch to recognize faces, handguns, and people in the video. We randomly divided our [dataset](datasets/yolo) into 4,000 images for training and 1,000 for testing.  Afterward, we downloaded YOLOv4 from [Alexey Bochkovskiy’s GitHub](https://github.com/AlexeyAB/darknet) (YOLOv4 creator’s GitHub repository). This repository explains in detail how to configure YOLO. In the folder that contains the YOLO dataset we can find four files, which detail the classes, the location of the training and test images. These files are necessary for its operation. Furthermore, we trained YOLOv4 for 6,000 iterations. The [YOLO folder](yolo) includes two files, one is the settings used in YOLO, and the other contains the training weights. These files will allow you to apply YOLO to detect the three classes: weapons, faces, and people.
 
 ## Run the program
-Armed people algorithms and heuristics should be saved in the ...\Yolo_v4\darknet\build\darknet\x64 folder. Then, run the following command in your terminal or command prompt for Armed people algorithms:
+Armed people algorithms, heuristics and dataset generator should be saved in the ...\Yolo_v4\darknet\build\darknet\x64 folder. Then, run the following command in your terminal or command prompt for Armed people algorithms:
 ```
 python accuracy.py
 ```
@@ -157,4 +157,7 @@ python center.py
 ```
 python distance.py
 ```
-
+To execute the different dataset generator:
+```
+python dataset_generator.py
+```
